@@ -17,7 +17,7 @@ const BookingProduct = () => {
 
 
   useEffect(() => {
-    fetch(`http://localhost:5000/allProducts/${productId}`)
+    fetch(`https://agile-falls-12684.herokuapp.com/allProducts/${productId}`)
       .then((res) => res.json())
       .then((data) => setProductDetails(data));
   }, [productId]);
@@ -28,7 +28,7 @@ const BookingProduct = () => {
     data.brand = productDetails?.brand;
     data.img= productDetails?.img;
     
-    fetch("http://localhost:5000/orderedProduct", {
+    fetch("https://agile-falls-12684.herokuapp.com/orderedProduct", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

@@ -8,7 +8,7 @@ const ManageAllOrders = () => {
   
 
   useEffect(()=>{
-    fetch('http://localhost:5000/orderedProducts')
+    fetch('https://agile-falls-12684.herokuapp.com/orderedProducts')
     .then(res=>res.json())
     .then(data=>setOrderProducts(data));
 
@@ -18,7 +18,7 @@ const ManageAllOrders = () => {
    const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure want to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/orderedProducts/${id}`;
+      const url = `https://agile-falls-12684.herokuapp.com/orderedProducts/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -39,7 +39,7 @@ const ManageAllOrders = () => {
   const handleConfirm=(id)=>{
     const confirm = window.confirm("Are you sure want to Confirm?");
     if(confirm) {
-      fetch(`http://localhost:5000/orderedProducts/${id}`, {
+      fetch(`https://agile-falls-12684.herokuapp.com/orderedProducts/${id}`, {
         method: 'PUT',
       })
       .then(res=>res.json())

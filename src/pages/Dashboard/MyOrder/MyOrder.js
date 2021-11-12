@@ -19,7 +19,7 @@ const MyOrder = () => {
   
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orderedProduct/${user?.email}`)
+    fetch(`https://agile-falls-12684.herokuapp.com/orderedProduct/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setOrderProduct(data));
   }, [user.email]);

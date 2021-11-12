@@ -1,7 +1,7 @@
 # ROAD-PADEL
 
 ## SITE LINK
-live site link('')
+live site link('https://road-padel.firebaseapp.com/')
 
 
 ## Everything that has been used to create the site-
@@ -15,3 +15,6 @@ live site link('')
 7. CONTEXT API
 8. REACT HOOK FORM
 9. JWT
+
+### About this site
+It is a NIche Product Website..It is a bicycle related website. Customer can order a bicycle in this website..It a dynamic site... 
