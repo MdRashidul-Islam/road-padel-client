@@ -1,0 +1,51 @@
+.footer {
+ background-color: #2D2D2D;
+ overflow-x: hidden;
+}
+
+.footer-title{
+  color: #FFB807;
+  
+}
+.footer-logo{
+  border-radius: 5px;
+  height: 70px;
+}
+
+.footer-box {
+  padding: 20px;
+  text-align: center !important;
+  line-height: 10px;
+
+}
+.input{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 2px;
+}
+
+.subs-btn{
+  margin-right:110px ;
+  margin-top: 10px;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 2px;
+  font-weight: bold;
+  background:#FFB807;
+  transition: 0.3s;
+  color: black;
+  margin-left: 15px;
+}
+.subs-btn:hover{
+  background-color: #9c7103;
+  color: white;
+}
+
+.copyright {
+  color: #FFB807;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+

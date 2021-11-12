@@ -1,0 +1,10 @@
+.newUser-text{
+  text-decoration: none;
+  background-color: rgba(128, 128, 128, 0.151);
+  padding:5px 20px;
+}
+
+.spinner{
+  font-size: 25px;
+  padding: 10px;
+}

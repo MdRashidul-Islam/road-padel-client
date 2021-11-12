@@ -1,0 +1,19 @@
+.home-product {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.product-hover:hover{
+  border: 1px solid #FFB800;
+  
+}
+
+@media only screen and (max-width:688px) {
+  .product-hover{
+   height:"400px"
+  }
+
+  
+
+}

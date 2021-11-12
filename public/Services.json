@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Bicycle Repair",
+    "img": "https://templatekits.themewarrior.com/roadpedal/wp-content/uploads/sites/29/elementor/thumbs/services-0-pbrw7099as1xq8agbmizctn8ljlch2pmdj5s0lile2.jpg",
+    "description": "Bicycle Doctor House Calls is proud to serve all of South Florida with top-of-the-line bicycles and scooters, as well as a full gamut of mobile repair services "
+  },
+  {
+    "id": 2,
+    "name": "Bicycle Fitting",
+    "img": "https://templatekits.themewarrior.com/roadpedal/wp-content/uploads/sites/29/elementor/thumbs/services-0-1-pbrw7173hm381u9364xlxbep6xgportcpnt9hvh77u.jpg",
+    "description": "A bike that fits well and is right for your height, flexibility and riding style is a bike you’ll love riding. A bike that fits poorly can lead to inefficient riding, muscle aches and pains, and general discomfort that might discourage you from riding as long or as far as you want."
+  },
+  {
+    "id": 3,
+    "name": "Bicycle Rental",
+    "img": "https://templatekits.themewarrior.com/roadpedal/wp-content/uploads/sites/29/elementor/thumbs/services-0-2-pbrw732rva5sp26cv5qv2axmdp7g460tdx48gfeeve.jpg",
+    "description": "You may aspire to match that low, long, aerodynamic position of the pros, but it’s important to set the bike up to match your current abilities. As you work on strength "
+  }
+]

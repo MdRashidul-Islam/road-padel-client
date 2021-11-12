@@ -1,0 +1,76 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222222;
+  position: fixed;
+  width: 100%;
+}
+
+#toggle-menu {
+  display: none;
+}
+
+.toggle {
+  color: #fff;
+  display: none;
+  margin-right: 20px;
+}
+
+.nav-logo {
+  display: inline;
+  color: #ffb800;
+  margin-left: 20px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  margin-left: 25px;
+}
+
+#toggle-menu:checked ~ .nav-item {
+  transform: translateY(0px);
+}
+
+.login {
+  border-bottom: 2px solid #e7e415;
+  border-radius: 5px;
+  padding: 1px 10px;
+  position: relative;
+  top: -2px;
+  left: -10px;
+  margin-left: 20px;
+}
+
+.login:hover {
+  background-color: #1573e7;
+  color: white;
+}
+
+@media (max-width: 644px) {
+  .toggle {
+    display: inline-block;
+  }
+
+  .nav-item {
+    position: absolute;
+    background: rgb(128, 128, 128);
+    width: 100%;
+    left: 0;
+    margin-top: 210px;
+    transform: translateY(-500px);
+    transition: 0.3s linear;
+  }
+
+  .nav-item a {
+    text-decoration: none;
+    display: block;
+    text-align: start;
+    font-size: 20px;
+    margin-left: 20px;
+    color: #fff;
+    padding: 8px;
+  }
+}
