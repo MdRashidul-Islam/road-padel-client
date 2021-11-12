@@ -8,6 +8,7 @@ import BookingProduct from "./pages/Home/BookingProduct/BookingProduct";
 import PrivateRoute from "./pages/Login/PrivateRoute/PrivateRoute";
 import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
 import AllProducts from "./pages/AllProduct/AllProducts";
+import NotFound from "./pages/NotFound/NotFound"
 
 
 function App() {
@@ -36,6 +37,9 @@ function App() {
             </Route>
             <Route exact path="/register">
               <Register></Register>
+            </Route>
+            <Route exact path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
         </BrowserRouter>
