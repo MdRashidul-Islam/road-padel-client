@@ -11,15 +11,14 @@ import Paper from "@mui/material/Paper";
 import useAuth from "../../../hooks/useAuth";
 import { Button } from "@mui/material";
 
-
 const MyOrder = () => {
   const { user } = useAuth();
   const [orderedProduct, setOrderProduct] = useState([]);
 
-  
-
   useEffect(() => {
-    fetch(`https://agile-falls-12684.herokuapp.com/orderedProduct/${user?.email}`)
+    fetch(
+      `https://agile-falls-12684.herokuapp.com/orderedProduct/${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => setOrderProduct(data));
   }, [user.email]);
@@ -28,7 +27,7 @@ const MyOrder = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure want to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/orderedProduct/${id}`;
+      const url = `https://agile-falls-12684.herokuapp.com/orderedProduct/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -75,8 +74,16 @@ const MyOrder = () => {
               <TableCell align="right">{product?.brand}</TableCell>
               <TableCell align="right">{product?.price}</TableCell>
               <TableCell align="right">{product?.status}</TableCell>
-              <TableCell align="right"> <Button variant="contained" sx={{background: 'red', color:'white'}} onClick={() => handleDelete(product._id)}>delete</Button></TableCell>
-              
+              <TableCell align="right">
+                {" "}
+                <Button
+                  variant="contained"
+                  sx={{ background: "red", color: "white" }}
+                  onClick={() => handleDelete(product._id)}
+                >
+                  delete
+                </Button>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
