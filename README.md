@@ -1,7 +1,7 @@
 # ROAD-PADEL
 
 ## SITE LINK
-live site link('https://road-padel.firebaseapp.com/')
+live site link('https://road-padel.web.app/')
 
 
 ## Everything that has been used to create the site-

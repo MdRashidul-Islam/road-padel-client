@@ -81,7 +81,7 @@ const useFirebase = () => {
       .then((result) => {
         const user = result.user;
         saveUser(user.email, user.displayName, "PUT");
-        const destination = location?.state?.from || "/";
+        const destination = location?.state?.from || "/dashboard";
         history?.replace(destination);
         setError("");
       })
