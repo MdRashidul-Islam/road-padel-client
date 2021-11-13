@@ -16,7 +16,7 @@ import Review from "../Review/Review";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import AddProduct from "../AddProduct/AddProduct";
 import AdminRoute from "../../Login/AdminRoute/AdminRoute";
-import './Dashboard.css'
+import "./Dashboard.css";
 import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
 import ManageProducts from "../ManageProducts/ManageProducts";
 import DashBoard from "../DahBoard/DashBoard";
@@ -37,59 +37,99 @@ function Dashboard(props) {
   const drawer = (
     <div className="plat">
       <Toolbar />
-      
-      <div className="dash-menu">
-      <NavLink sx={{mb: 2}} to={`/home`}
-      style={isActive => ({
-        color: isActive ? "#ffb800" : "white"
-      })}
-      >Home</NavLink> 
-      
-      {admin && <NavLink to={`${url}/makeAdmin`}
-       style={isActive => ({
-        color: isActive ? "#ffb800" : "white"
-      })}
-      >Make Admin</NavLink>} 
 
-{admin && <NavLink to={`${url}/manageAllOrders`}
-       style={isActive => ({
-        color: isActive ? "#ffb800" : "white"
-      })}
-      >Manage All Orders</NavLink>} 
-{admin && <NavLink to={`${url}/manageProducts`}
-       style={isActive => ({
-        color: isActive ? "#ffb800" : "white"
-      })}
-      >Manage Products</NavLink>}
-     
-      
-      {admin && <NavLink to={`${url}/addProduct`}
-       style={isActive => ({
-        color: isActive ? "#ffb800" : "white"
-      })}
-      >Add Product</NavLink>} 
-      
-      {!admin &&<NavLink to={`${url}/myOrder`}
-      style={isActive => ({
-        color: isActive ? "#ffb800" : "white"
-      })}
-      >My Order</NavLink>}
-     
-     {!admin&& <NavLink to={`${url}/review`}
-       style={isActive => ({
-        color: isActive ? "#ffb800" : "white"
-      })}
-      >Review</NavLink>}
-      
-      {!admin && <NavLink to={`${url}/pay`}
-       style={isActive => ({
-        color: isActive ? "#ffb800" : "white"
-      })}
-      >Pay</NavLink> }<br />
-     
-      <NavLink to="/" >
-        <button className="custom-btn" onClick={logOut}>log out</button>
-      </NavLink>
+      <div className="dash-menu">
+        <NavLink
+          sx={{ mb: 2 }}
+          to={`/home`}
+          style={(isActive) => ({
+            color: isActive ? "#ffb800" : "white",
+          })}
+        >
+          Home
+        </NavLink>
+
+        {admin && (
+          <NavLink
+            to={`${url}/makeAdmin`}
+            style={(isActive) => ({
+              color: isActive ? "#ffb800" : "white",
+            })}
+          >
+            Make Admin
+          </NavLink>
+        )}
+
+        {admin && (
+          <NavLink
+            to={`${url}/manageAllOrders`}
+            style={(isActive) => ({
+              color: isActive ? "#ffb800" : "white",
+            })}
+          >
+            Manage All Orders
+          </NavLink>
+        )}
+        {admin && (
+          <NavLink
+            to={`${url}/manageProducts`}
+            style={(isActive) => ({
+              color: isActive ? "#ffb800" : "white",
+            })}
+          >
+            Manage Products
+          </NavLink>
+        )}
+
+        {admin && (
+          <NavLink
+            to={`${url}/addProduct`}
+            style={(isActive) => ({
+              color: isActive ? "#ffb800" : "white",
+            })}
+          >
+            Add Product
+          </NavLink>
+        )}
+        {!admin && (
+          <NavLink
+            to={`${url}/myOrder`}
+            style={(isActive) => ({
+              color: isActive ? "#ffb800" : "white",
+            })}
+          >
+            My Order
+          </NavLink>
+        )}
+
+        {!admin && (
+          <NavLink
+            to={`${url}/review`}
+            style={(isActive) => ({
+              color: isActive ? "#ffb800" : "white",
+            })}
+          >
+            Review
+          </NavLink>
+        )}
+
+        {!admin && (
+          <NavLink
+            to={`${url}/pay`}
+            style={(isActive) => ({
+              color: isActive ? "#ffb800" : "white",
+            })}
+          >
+            Pay
+          </NavLink>
+        )}
+        <br />
+
+        <NavLink to="/">
+          <button className="custom-btn" onClick={logOut}>
+            log out
+          </button>
+        </NavLink>
       </div>
       <br />
     </div>
@@ -120,8 +160,7 @@ function Dashboard(props) {
           </IconButton>
           <Typography variant="p" noWrap component="div">
             Name: {user.displayName} <br />
-            Email: {user.email} 
-           
+            Email: {user.email}
           </Typography>
         </Toolbar>
       </AppBar>
@@ -174,7 +213,7 @@ function Dashboard(props) {
         <Toolbar />
         <Switch>
           <Route exact path={path}>
-          <DashBoard></DashBoard>
+            <DashBoard></DashBoard>
           </Route>
           <Route path={`${path}/pay`}>
             <Pay></Pay>
@@ -189,7 +228,7 @@ function Dashboard(props) {
             <MakeAdmin></MakeAdmin>
           </AdminRoute>
           <AdminRoute path={`${path}/manageProducts`}>
-           <ManageProducts></ManageProducts>
+            <ManageProducts></ManageProducts>
           </AdminRoute>
           <AdminRoute path={`${path}/manageAllOrders`}>
             <ManageAllOrders></ManageAllOrders>
