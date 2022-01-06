@@ -17,4 +17,4 @@ live site link('https://road-padel.web.app/')
 9. JWT
 
 ### About this site
-It is a NIche Product Website..It is a bicycle related website. Customer can order a bicycle in this website..It a dynamic site... 
+It is a NIche Product Website. It is a bicycle related website. Customer can order a bicycle in this website. It a dynamic site. Full responsive app with firebase and admin authentication, dashboard functionality for admin and customer. Customers can buy the product, check product delivery status, and be able to give their feedback. Admin can add or remove any kind of product and change order status and make a new admin.
