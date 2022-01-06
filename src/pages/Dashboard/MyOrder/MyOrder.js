@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
-import * as React from "react";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-
+import * as React from "react";
+import { useEffect, useState } from "react";
 import useAuth from "../../../hooks/useAuth";
-import { Button } from "@mui/material";
 
 const MyOrder = () => {
   const { user } = useAuth();
@@ -76,13 +76,12 @@ const MyOrder = () => {
               <TableCell align="right">{product?.status}</TableCell>
               <TableCell align="right">
                 {" "}
-                <Button
-                  variant="contained"
-                  sx={{ background: "red", color: "white" }}
+                <button
+                  className="custom-button"
                   onClick={() => handleDelete(product._id)}
                 >
-                  delete
-                </Button>
+                  <FontAwesomeIcon icon={faTrashAlt} />
+                </button>
               </TableCell>
             </TableRow>
           ))}

@@ -1,25 +1,25 @@
-import * as React from "react";
-import PropTypes from "prop-types";
+import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { Switch, Route, useRouteMatch, NavLink } from "react-router-dom";
-import MyOrder from "../MyOrder/MyOrder";
+import PropTypes from "prop-types";
+import * as React from "react";
+import { NavLink, Route, Switch, useRouteMatch } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
-import Pay from "../Pay/Pay";
-import Review from "../Review/Review";
-import MakeAdmin from "../MakeAdmin/MakeAdmin";
-import AddProduct from "../AddProduct/AddProduct";
 import AdminRoute from "../../Login/AdminRoute/AdminRoute";
-import "./Dashboard.css";
+import AddProduct from "../AddProduct/AddProduct";
+import DashBoard from "../DahBoard/DashBoard";
+import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
 import ManageProducts from "../ManageProducts/ManageProducts";
-import DashBoard from "../DahBoard/DashBoard";
+import MyOrder from "../MyOrder/MyOrder";
+import Pay from "../Pay/Pay";
+import Review from "../Review/Review";
+import "./Dashboard.css";
 
 const drawerWidth = 240;
 
@@ -39,6 +39,8 @@ function Dashboard(props) {
       <Toolbar />
 
       <div className="dash-menu">
+        {/* <FontAwesomeIcon icon={faHome} /> */}
+
         <NavLink
           sx={{ mb: 2 }}
           to={`/home`}
@@ -49,6 +51,7 @@ function Dashboard(props) {
           Home
         </NavLink>
 
+        {/* <FontAwesomeIcon icon={faUser} /> */}
         {admin && (
           <NavLink
             to={`${url}/makeAdmin`}
@@ -91,6 +94,7 @@ function Dashboard(props) {
             Add Product
           </NavLink>
         )}
+
         {!admin && (
           <NavLink
             to={`${url}/myOrder`}
@@ -98,6 +102,7 @@ function Dashboard(props) {
               color: isActive ? "#ffb800" : "white",
             })}
           >
+            {/* <FontAwesomeIcon icon={faUser} /> */}
             My Order
           </NavLink>
         )}
@@ -142,6 +147,7 @@ function Dashboard(props) {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
+        className="appBar"
         position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
@@ -158,7 +164,7 @@ function Dashboard(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="p" noWrap component="div">
+          <Typography className="dashText" variant="p" noWrap component="div">
             Name: {user.displayName} <br />
             Email: {user.email}
           </Typography>
